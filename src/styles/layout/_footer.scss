@@ -1,0 +1,21 @@
+// ============================================
+// Footer
+// ============================================
+
+footer {
+  margin: 120px 0 80px;
+  text-align: center;
+  color: var(--gray);
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color map-get($transitions, normal);
+
+    &:hover {
+      border-color: var(--accent);
+    }
+  }
+}
+

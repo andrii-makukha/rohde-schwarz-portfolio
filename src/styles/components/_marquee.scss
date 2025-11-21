@@ -1,0 +1,30 @@
+// ============================================
+// Marquee
+// ============================================
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+  border-radius: map-get($border-radius, sm);
+  border: 1px solid var(--border);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 18px;
+  padding: 18px 0;
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+}
+
+.pill {
+  padding: 12px 26px;
+  border-radius: map-get($border-radius, full);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+

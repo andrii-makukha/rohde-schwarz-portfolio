@@ -1,0 +1,26 @@
+{
+  "name": "rohde-schwarz-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Rohde & Schwarz application",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js --fix"
+  },
+  "keywords": [
+    "portfolio",
+    "rohde-schwarz",
+    "ausbildung",
+    "fachinformatiker"
+  ],
+  "author": "Andrii Makukha",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.77.0",
+    "vite": "^5.4.0"
+  },
+  "dependencies": {}
+}
+

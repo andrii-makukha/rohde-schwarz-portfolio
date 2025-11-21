@@ -1,0 +1,49 @@
+// ============================================
+// Responsive Utilities
+// ============================================
+
+@mixin mobile {
+  @media (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+// Responsive Styles
+@include mobile {
+  .panel {
+    padding: 36px;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .timeline {
+    padding-left: 30px;
+
+    &::before {
+      left: 6px;
+    }
+  }
+
+  .timeline-item::before {
+    left: -6px;
+  }
+}
+

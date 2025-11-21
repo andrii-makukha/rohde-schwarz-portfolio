@@ -1,0 +1,25 @@
+// ============================================
+// Main SCSS File
+// ============================================
+
+// Base
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/animations';
+
+// Layout
+@import 'layout/main';
+@import 'layout/footer';
+
+// Components
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/timeline';
+@import 'components/marquee';
+@import 'components/sections';
+
+// Utilities
+@import 'utilities/responsive';
+
