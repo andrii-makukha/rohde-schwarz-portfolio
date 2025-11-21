@@ -7,17 +7,19 @@ import { isInViewport, debounce } from '../utils/helpers.js';
 export const initScrollAnimations = () => {
   const animatedElements = document.querySelectorAll('.panel, .card, .timeline-item');
   
+  // Add initial animation class to all elements
+  animatedElements.forEach((element) => {
+    element.classList.add('scroll-animate');
+  });
+  
   const handleScroll = debounce(() => {
     animatedElements.forEach((element, index) => {
-      if (isInViewport(element)) {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        
+      // Only animate if element is in viewport and hasn't been animated yet
+      if (isInViewport(element) && !element.classList.contains('animated')) {
+        // Add animated class with slight delay for staggered effect
         setTimeout(() => {
-          element.style.opacity = '1';
-          element.style.transform = 'translateY(0)';
-        }, index * 100);
+          element.classList.add('animated');
+        }, index * 50);
       }
     });
   }, 100);

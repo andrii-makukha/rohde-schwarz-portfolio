@@ -7,11 +7,23 @@
   border-radius: map-get($border-radius, md);
   padding: 28px;
   background: rgba(255, 255, 255, 0.02);
-  transition: all map-get($transitions, normal) ease;
+  
+  // Hover transitions (only for background and border, transform handled separately)
+  transition: background map-get($transitions, normal) ease, 
+              border-color map-get($transitions, normal) ease;
 
+  // Hover effect - works for both animated and non-animated cards
   &:hover {
     background: rgba(255, 255, 255, 0.04);
     border-color: var(--accent);
+    
+    // Only apply transform on hover if already animated
+    &.animated {
+      transform: translateY(-2px);
+      transition: background map-get($transitions, normal) ease, 
+                  border-color map-get($transitions, normal) ease,
+                  transform map-get($transitions, normal) ease;
+    }
   }
 
   h3 {
@@ -59,11 +71,16 @@
   border-radius: map-get($border-radius, md);
   padding: 24px;
   background: rgba(255, 255, 255, 0.02);
-  transition: all map-get($transitions, normal) ease;
+  transition: background map-get($transitions, normal) ease;
 
   &:hover {
     background: rgba(255, 255, 255, 0.04);
-    transform: translateY(-2px);
+    
+    &.animated {
+      transform: translateY(-2px);
+      transition: background map-get($transitions, normal) ease,
+                  transform map-get($transitions, normal) ease;
+    }
   }
 
   h3 {
@@ -91,11 +108,16 @@
   border: 1px solid var(--border);
   border-radius: map-get($border-radius, sm);
   text-align: center;
-  transition: all map-get($transitions, normal) ease;
+  transition: border-color map-get($transitions, normal) ease;
 
   &:hover {
     border-color: var(--accent);
-    transform: translateY(-4px);
+    
+    &.animated {
+      transform: translateY(-4px);
+      transition: border-color map-get($transitions, normal) ease,
+                  transform map-get($transitions, normal) ease;
+    }
   }
 
   h4 {
