@@ -15,9 +15,10 @@ Personal portfolio website for Ausbildung application at Rohde & Schwarz.
 - CSS3 (Custom properties, Flexbox, Grid)
 - Vanilla JavaScript (no frameworks)
 
-## 🌐 Live Demo
+## 🌐 Links
 
-[Add your GitHub Pages URL here after deployment]
+- **Repository**: https://github.com/andrii-makukha/rohde-schwarz-portfolio
+- **GitHub Pages**: [Enable in Settings → Pages to get live URL]
 
 ## 📧 Contact
 
